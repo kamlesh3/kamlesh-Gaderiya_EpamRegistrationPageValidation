@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>
+        LOGIN
+    </title>
+    <script type="text/javascript">
+        function loginValid() {
+            var name = document.getElementById("fname").value;
+            var pass = document.getElementById("pwd").value;
+            if (name == "") {
+                window.alert("Please enter your name");
+                return false;
+            }
+            if ((name.length <= 2) || (name.length > 20)) {
+                window.alert("**user length must be between 2 and 20");
+                return false;
+            }
+            if (!isNaN(name)) {
+                window.alert("**only characters are allowed");
+                return false;
+            }
+            if (pass == "") {
+                window.alert("Please enter your password");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: aqua;">
+    <center>
+        <h1>
+            <font color="purple" size="50">Welcome to Login Page</font>
+        </h1>
+        <form action="#" onsubmit="return loginValid()">
+            <fieldset style="padding: 20px;">
+                <legend>Enter your login details</legend>
+                Enter your name:<input type="text" name="fname" id="fname"><br><br> Enter your password:<input type="password" name="pwd" id="pwd"><br><br>
+                <input type="reset" name="Reset">
+                <input type="submit" name="Submit">
+            </fieldset>
+        </form>
+    </center>
+</body>
+
+</html>
